@@ -1,0 +1,46 @@
+name: sightwords
+description: "Sight Words Flash Cards — all 220 Dolch + 300 Fry sight words for K-3 readers."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State management
+  flutter_riverpod: ^2.6.0
+
+  # Local persistence (mastery map + settings)
+  shared_preferences: ^2.3.0
+
+  # IAP — StoreKit (iOS) + Play Billing (Android)
+  # No RevenueCat: Kids Category compliance (see SPEC §3 + §7)
+  in_app_purchase: ^3.2.0
+
+  # Text-to-speech: device TTS engine, no network, no API key
+  flutter_tts: ^4.2.0
+
+  # Optional speech recognition for quiz mode voice input
+  # iOS minimum 14.0 is driven by this package (see SPEC §2)
+  speech_to_text: ^7.0.0
+
+  # App version display in SettingsScreen
+  package_info_plus: ^8.0.0
+
+  # Privacy policy link in SettingsScreen
+  url_launcher: ^6.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
